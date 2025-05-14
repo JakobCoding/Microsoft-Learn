@@ -15,6 +15,27 @@ After you complete this module, you'll be able to:
 - Combine string data into a new string value via concatenation
 - Combine string data into a new string value via interpolation
 
+### **Verbatim string literal**
+
+A verbatim string literal will keep all whitespace and characters without the need to escape the backslash. To create a verbatim string, use the `@` directive before the literal string.
+
+### **Format output using verbatim string literals**
+
+Add the following line of code beneath the code that you created previously:
+
+```
+Console.Write(@"c:\invoices");
+```
+### **Unicode escape characters**
+
+You can also add encoded characters in literal strings using the `\u` escape sequence, then a four-character code representing some character in Unicode (UTF-16).
+```
+// Kon'nichiwa World
+Console.WriteLine("\u3053\u3093\u306B\u3061\u306F World!");
+```
+Output:
+`こんにちは World!`
+
 ### **Format output using character escape sequences:**
 
 ![GenerateInvoice.png](/BasicStringFormatting/GenerateInvoice.png)
@@ -24,10 +45,8 @@ After you complete this module, you'll be able to:
 ## **Write your first code using C# - 13/05/2025**
 
 Let's focus on the following line of code you wrote:
-
 ```
 Console.WriteLine("Hello World!");
-
 ```
 
 When you ran your code, you saw that the message `Hello World!` was printed to the output console. When the phrase is surrounded by double-quotation marks in your C# code, it's called a **literal string**. In other words, you literally wanted the characters `H`, `e`, `l`, `l`, `o`, and so on, sent to the output.
@@ -73,7 +92,6 @@ Float Type    Precision
 float         ~6-9 digits
 double        ~15-17 digits
 decimal        28-29 digits
-
 ```
 
 Here, precision reflects the number of digits past the decimal that are accurate.
@@ -82,7 +100,6 @@ Add the following in the code editor:
 
 ```
 Console.WriteLine(0.25F);
-
 ```
 
 To create a `float` literal, append the letter `F` after the number. In this context, the `F` is called a *literal suffix*. The literal suffix tells the compiler you wish to work with a value of `float` type. You can use either a lower-case `f` or upper-case `F` as the literal suffix for a `float`.
@@ -107,7 +124,6 @@ Console.WriteLine(123);
 
 Console.WriteLine("true");
 Console.WriteLine(true);
-
 ```
 
 However, it's only the displayed output that appears to be similar. The fact is that the kinds of things you can do with the underlying `int` or `bool` will be different than their `string` equivalent.
@@ -138,11 +154,8 @@ A variable name is a human-friendly label that the compiler assigns to a memory 
 
 To create a new variable, you must first declare the data type of the variable, and then give it a name.
 
-C#Copy
-
 ```
 string firstName;
-
 ```
 
 In this case, you're creating a new variable of type `string` called `firstName`. From now on, this variable can only hold string values.
@@ -184,7 +197,6 @@ int gameScore;
 decimal particlesPerMillion;
 
 bool processedCustomer;
-
 ```
 
 ## **Recap**
@@ -203,7 +215,6 @@ An implicitly typed local variable is created by using the `var` keyword follo
 
 ```
 var message = "Hello world!";
-
 ```
 
 In this example, a string variable was created using the `var` keyword instead of the `string` keyword.
@@ -214,7 +225,6 @@ In the example:
 
 ```
 var message = "Hello world!";
-
 ```
 
 Because the variable `message` is immediately set to the `string` value `"Hello World!"`, the C# compiler understands the intent and treats every instance of `message` as an instance of type `string`.
@@ -224,16 +234,13 @@ In fact, the `message` variable is typed to be a `string` and can never be c
 ```
 var message = "Hello World!";
 message = 10.703m;
-
 ```
-
 If you run this code, you'll see the following error message.
 
 OutputCopy
 
 ```
 (2,11): error CS0029: Cannot implicitly convert type 'decimal' to 'string'
-
 ```
 
 **Note**
@@ -246,7 +253,6 @@ It's important to understand that the `var` keyword is dependent on the value 
 
 ```
 var message;
-
 ```
 
 If you attempt to run this code, as it compiles, you'll see the following output:
@@ -255,9 +261,7 @@ OutputCopy
 
 ```
 (1,5): error CS0818: Implicitly-typed variables must be initialized
-
 ```
-
 ### **Why use the `var` keyword?**
 
 The `var` keyword has been widely adopted in the C# community. It's likely that if you look at a code example in a book or online, you'll see the `var` keyword used instead of the actual data type name, so it's important to understand its usage.
