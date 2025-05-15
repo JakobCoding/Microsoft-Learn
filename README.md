@@ -15,6 +15,20 @@ After you complete this module, you'll be able to:
 - Combine string data into a new string value via concatenation
 - Combine string data into a new string value via interpolation
 
+### Here's what you've learned about string interpolation so far:
+
+- String interpolation ($) provides an improvement over string concatenation by reducing the number of characters required in some situations.
+- You can combine string interpolation and verbatim literals (@) by combining the symbols for each and using that as a prefix for the string template.
+
+## **Recap - Combine string using character escape sequences**
+
+Here's what you've learned about formatting literal strings so far:
+- Use character escape sequences when you need to insert a special character into a literal string, like a tab `\t`, new line `\n`, or a double quotation mark `\"`.
+- Use an escape character for the backslash `\\` when you need to use a backslash in all other scenarios.
+- Use the `@` directive to create a verbatim string literal that keeps all whitespace formatting and backslash characters in a string.
+- Use the `\u` plus a four-character code to represent Unicode characters (UTF-16) in a string.
+- Unicode characters may not print correctly depending on the application.
+
 ### **Verbatim string literal**
 
 A verbatim string literal will keep all whitespace and characters without the need to escape the backslash. To create a verbatim string, use the `@` directive before the literal string.
