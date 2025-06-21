@@ -5,14 +5,26 @@ using System;
 {
     static void Main()
     {
-        // Decclare a new Array of strings to hold 3 elements
+        // Initialize an array with 3 elements
+        string[] orderIDs = [ "A123", "B456", "C789" ];
+
+
+        /*
+        * Decclare a new Array of strings to hold 3 elements
         string[] fraudulentOrderIDs = new string[3];
 
         fraudulentOrderIDs[0] = "A123";
         fraudulentOrderIDs[1] = "B456";
         fraudulentOrderIDs[2] = "C789";
+    
+        Console.WriteLine($"First: {fraudulentOrderIDs[0]}");
+        Console.WriteLine($"Second: {fraudulentOrderIDs[1]}");
+        Console.WriteLine($"Third: {fraudulentOrderIDs[2]}");
 
+        fraudulentOrderIDs[0] = "F000";
+        Console.WriteLine($"Reassign First: {fraudulentOrderIDs[0]}");
 
+        */
 
 
 
